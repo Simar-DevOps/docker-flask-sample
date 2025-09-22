@@ -1,4 +1,6 @@
-﻿# docker-flask-sample
+﻿[![Publish Docker image (GHCR)](https://github.com/Simar-DevOps/docker-flask-sample/actions/workflows/publish-image.yml/badge.svg)](https://github.com/Simar-DevOps/docker-flask-sample/actions)
+**Package:** https://ghcr.io/simar-devops/docker-flask-sample
+# docker-flask-sample
 
 Small Flask app packaged with Docker & served by Gunicorn. Health endpoint at `/healthz`.
 
@@ -53,3 +55,4 @@ Dev notes
 Runs as non-root, served by Gunicorn, UTF-8 fix, /healthz endpoint.
 
 Multi-arch ready via Buildx in CI.
+
