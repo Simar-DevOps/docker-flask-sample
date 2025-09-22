@@ -1,0 +1,6 @@
+﻿# Normalize text files to LF (good for Docker/Linux)
+*           text=auto
+*.py        text eol=lf
+Dockerfile  text eol=lf
+*.txt       text eol=lf
+*.sh        text eol=lf
