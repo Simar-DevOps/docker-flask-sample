@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-sample
+  labels:
+    app: flask-sample
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask-sample
+  template:
+    metadata:
+      labels:
+        app: flask-sample
+    spec:
+      containers:
+        - name: app
+          image: ghcr.io/simar-devops/docker-flask-sample:v0.1.4
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 10
