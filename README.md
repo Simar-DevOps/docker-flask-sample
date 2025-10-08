@@ -13,6 +13,7 @@ Small Flask app packaged with Docker & served by Gunicorn. Health endpoint at `/
 
 ## Image (GitHub Container Registry)
 
+images are multi-arch
 **Current release:**
 ghcr.io/simar-devops/docker-flask-sample:v0.1.4
 
